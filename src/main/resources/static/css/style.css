@@ -1,0 +1,16 @@
+* {
+    background-color: rgb(210, 211, 233);
+}
+
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    /* Adjust as needed */
+}
+
+.card {
+    width: 40%;
+    /* Adjust the width as needed */
+    margin: 10px;
+    /* Adjust the margin as needed */
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Details</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
+        integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+
+<body>
+    
+    <h3 class="text-center mt-4 mb-0">Please catch Your Student details</h3>
+
+    <div class="card-container text-center ">
+        <div class="row mt-5">
+            <div th:each="student : ${detailsList}" class="col-md-4 mb-4">
+                <div class="card" style="width: 18rem;">
+                    <h5 class="card-header">Student</h5>
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item" th:text="${'Name: ' + student.name}"></li>
+                        <li class="list-group-item" th:text="${'Enrollment Date: ' + student.enrollmentDate}"></li>
+                        <li class="list-group-item" th:text="${'Course: ' + student.course}"></li>
+                        <li class="list-group-item" th:text="${'Fee: ' + student.fees}"></li>
+                    </ul>
+                    <div class="card-body">
+                        <a href="/home" class="btn btn-outline-primary">Home</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</body>
+
+</html>
